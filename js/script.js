@@ -43,3 +43,57 @@ addToCartButtons.forEach(button => {
         alert(name + " added to cart!");
     });
 });
+
+
+// ============================
+// RENDER CART PAGE
+// ============================
+
+function renderCart() {
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartTotal = document.getElementById("cart-total");
+
+    if (!cartItemsContainer) return;
+
+    cartItemsContainer.innerHTML = "";
+    let total = 0;
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+        cartTotal.textContent = "0";
+        return;
+    }
+
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+
+        const div = document.createElement("div");
+        div.classList.add("cart-item");
+
+        div.innerHTML = `
+            <div class="cart-item-info">
+                <h4>${item.name}</h4>
+                <p>Price: $${item.price}</p>
+                <p>Quantity: ${item.quantity}</p>
+            </div>
+            <div class="cart-actions">
+                <button onclick="removeFromCart('${item.id}')">Remove</button>
+            </div>
+        `;
+
+        cartItemsContainer.appendChild(div);
+    });
+
+    cartTotal.textContent = total;
+}
+
+// Remove item
+function removeFromCart(id) {
+    cart = cart.filter(item => item.id !== id);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    renderCart();
+}
+
+// Call renderCart on page load
+renderCart();

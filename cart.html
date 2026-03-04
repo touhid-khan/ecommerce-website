@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NovaMart | Cart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav-container">
+        <div class="logo">NovaMart</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li>
+                    <a href="cart.html" class="active">
+                        Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="cart-section">
+    <div class="container">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: $<span id="cart-total">0</span></h3>
+        </div>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
