@@ -205,6 +205,44 @@ body {
     text-align: right;
 }
 
+.checkout{
+padding:60px 0;
+}
+
+.checkout-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+margin-top:30px;
+}
+
+.checkout-form input{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+font-family:inherit;
+}
+
+.order-summary{
+background:#fafafa;
+padding:25px;
+border-radius:8px;
+}
+
+.btn-primary{
+background:#111;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.btn-primary:hover{
+background:#333;
+}
 
 @media (max-width: 1200px) {
     .product-grid {

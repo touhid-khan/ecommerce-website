@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Checkout | NovaMart</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header class="navbar">
+
+<div class="container nav-wrapper">
+
+<h2 class="logo">NovaMart</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="cart.html">
+<i class="fa-solid fa-cart-shopping"></i> Cart
+</a>
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- CHECKOUT SECTION -->
+
+<section class="checkout">
+
+<div class="container">
+
+<h1>Checkout</h1>
+
+<div class="checkout-wrapper">
+
+
+<!-- SHIPPING FORM -->
+
+<form class="checkout-form">
+
+<h2>Shipping Details</h2>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="text" placeholder="Phone Number" required>
+
+<input type="text" placeholder="Street Address" required>
+
+<input type="text" placeholder="City" required>
+
+<input type="text" placeholder="Postal Code" required>
+
+
+<button type="submit" class="btn-primary">
+Place Order
+</button>
+
+</form>
+
+
+<!-- ORDER SUMMARY -->
+
+<div class="order-summary">
+
+<h2>Your Order</h2>
+
+<div id="checkout-items"></div>
+
+<hr>
+
+<h3>Total: $<span id="checkout-total">0</span></h3>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="container">
+
+<p>© 2026 NovaMart. All Rights Reserved.</p>
+
+</div>
+
+</footer>
+
+
+<!-- JS -->
+
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
